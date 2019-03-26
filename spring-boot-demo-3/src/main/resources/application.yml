@@ -1,0 +1,19 @@
+name: aaa
+hello: Good morning
+spring:
+  profiles:
+    active: hello
+  
+---
+spring:
+  profiles: goodbye,dev
+name: bbb
+
+---
+spring:
+  profiles: hello
+name: ccc
+    
+    
+    
+    

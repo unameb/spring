@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context 
+   http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean id="bean01" class="springDemoBean.Bean01">
+<property name="age" value="12"></property>
+<property name="name" value="aa"></property>
+<constructor-arg type="String" value="bb"></constructor-arg>
+<constructor-arg type="int" value="13"></constructor-arg> 
+</bean>
+
+<bean id="exampleBean" class="springDemoBean.ExampleBean">
+ <constructor-arg><ref bean="anotherbean"/> </constructor-arg>
+ <constructor-arg><ref bean="yetanotherbean"/></constructor-arg>
+ <constructor-arg type="int" value="3"></constructor-arg>
+ <property name="yetbean" ref="yetanotherbean"></property>
+ <property name="anotherbean" ref="anotherbean"></property>
+ <property name="i" value="1"></property>
+</bean>
+<bean id="anotherbean" class="springDemoBean.AnotherBean">
+<property name="anotherName" value="anotherName"></property>
+</bean>
+<bean id="yetanotherbean" class="springDemoBean.YetAnorherBean">
+<property name="yetName" value="yetName"></property>
+</bean>
+</beans>
