@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+span{
+	display:inline-block;
+	width:80px;
+}
+input{
+	margin-top: 15px;
+}
+.sp{
+	display:inline-block;
+	width:40px;
+}

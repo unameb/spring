@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+<link th:href="@{/css/main.css}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<form  action="login" th:object="${user}">
+<fieldset>
+ <span th:text="#{name}"></span><input type="text" th:field="*{name}" />
+   <span  th:errors="*{name}"></span>
+ <br/>
+ <span th:text="#{password}"></span><input type="text" th:field="*{password}" />
+   <span  th:errors="*{password}"></span>
+ <br/>
+<input type="submit" th:attr="value=#{sbutton}"/>
+</fieldset>
+</form> 
+</body>
+</html>

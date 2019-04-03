@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<link th:href="@{/css/main.css}" rel="stylesheet" type="text/css" />
+<body>
+<!-- <a th:href="@{/hello(age=3)}">aaaa</a>
+<span style="color:red" th:test="${name}">aaaaaaaaaaaaa</span> -->
+<label>点击切换语言: &nbsp; </label><a href="?lang=zh_CN">中文</a> &nbsp;&nbsp;
+<a href="?lang=en_US">English</a>
+ <form  action="join" th:object="${user}">
+<fieldset>
+ <span th:text="#{name}"></span><input type="text" th:field="*{name}" />
+   <span  th:errors="*{name}"></span>
+ <br/>
+ <span th:text="#{age}"></span><input type="text" th:field="*{age}" />
+   <span  th:errors="*{age}"></span>
+ <br/>
+ <span th:text="#{email}"></span><input type="text" th:field="*{email}"/>
+ <span  th:errors="*{eemail}"></span><br/>
+ <span th:text="#{password}"></span><input type="text" th:field="*{password}"/>
+ <span th:errors="*{password}"></span>
+ <br/>
+ <span th:text="#{sex}"></span><input type="radio" name="sex" value="1" checked="checked"/>
+ <span th:text="#{men}"></span>
+ <input type="radio" name="sex" value="0"/><span th:text="#{women}"></span>
+ <br/>
+ <input type="submit" th:attr="value=#{sbutton}"/>
+</fieldset>
+</form> 
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+<link th:href="@{/css/main.css}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+ <span class="sp" th:text="${user.name}"></span> success! 
+ <div>
+    <ul >
+        <li th:each="user:${users}">
+        <span th:text="#{name}"/><span th:text="${user.name}"></span><br/>
+        <span th:text="#{age}"/><span th:text="${user.age}"></span><br/>
+        <span th:text="#{email}"/><span th:text="${user.email}"></span><br/>
+        <span th:text="#{sex}"/><span th:text="${user.sex}==0?#{women}:#{men}"></span><br/>
+        <hr/>
+        </li>
+    </ul>
+ </div>
+ <!-- <table>
+       <tr>
+        <span th:text="#{name}"/>     
+        <span th:text="#{age}"/>
+        <span th:text="#{email}"/>
+        <span th:text="#{sex}"/>
+       </tr>
+       <tr>
+       <td><span th:text="${user.name}"></span></td>
+       <td><span th:text="${user.age}"></span></td>
+       <td><span th:text="${user.email}"></span></td>
+       <td><span th:text="${user.sex}"></span></td>
+       </tr>
+ </table>
+ <table>
+   <tr>
+     <th th:text="#{name}"></th>
+     <td><span th:text="${user.name}"></span></td>
+   </tr>
+   <tr>
+     <th th:text="#{age}"></th>
+     <td><span th:text="${user.age}"></span></td>
+   </tr>
+   <tr>
+     <th th:text="#{email}"></th>
+     <td><span th:text="${user.email}"></span></td>
+   </tr>
+   <tr>
+     <th th:text="#{sex}"></th>
+     <td><span th:text="${user.sex}"></span></td>
+   </tr>
+ </table> -->
+</body>
+</html>
