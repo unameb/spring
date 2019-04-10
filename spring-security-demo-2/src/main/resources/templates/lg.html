@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta thharset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+ <h1>hello word</h1>
+ <!-- <th:url value="/login" var="login"/>  -->
+<form action="lg" method="post">       
+	<div th:if="${param.error != null}">        
+		<p>
+			Invalid username and password.
+		</p>
+	</div>
+	<div th:if="${param.logout != null}">       
+		<p>
+			You have been logged out.
+		</p>
+		</div>
+	<p>
+		<label for="name">Username</label>
+		<input type="text" id="name" name="name"/>	
+	</p>
+	<p>
+		<label for="pwd">Password</label>
+		<input type="password" id="pwd" name="pwd"/>	
+	</p>
+	<input type="hidden"                        
+		th:name="${_csrf.parameterName}"
+		th:value="${_csrf.token}"/>
+	<button type="submit" class="btn">Log in</button>
+</form>
+</body>
+</html>
